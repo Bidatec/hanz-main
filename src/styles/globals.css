@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-green: #00AE8E;
+    --gray: #eee;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
+
+* {
+  /* border: 1px solid blue; */
+  /* padding: 5px; */
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IranSans';
+}
+
+@font-face {
+  font-family: IranSans;
+  src: url('/fonts/IRANSansX-Medium.woff');
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #ffffff93 !important;
+  color: #00ae8e !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 100% !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #00ae8e !important;
+  color: #ffffff !important;
+}
+
+div.swiper-button-prev::after,
+div.swiper-button-next::after {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 768px) {
+
+  div.swiper-button-prev,
+  div.swiper-button-next {
+    display: none!important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  div.swiper-scrollbar-horizontal {
+    display: none!important;
+  }
+}
+
+#home-carousel div.swiper-scrollbar-horizontal {
+  display: none!important;
+}
